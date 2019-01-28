@@ -63,7 +63,7 @@ def areaofatriangle(m1, b1, m2, b2, m3, b3):
     #y = (m1 * x) + b1;  y = (m2 * x) + b2; and y = (m3 * x) + b3
 
 
-    area = 0 #replace this with your calculation for area
+    area = math.abs(((y-b1/m1)((m2*x)+b2))-((m3*x)+b3)+((y-b2/m2)(((m3*x)+b3)-((m1*x)+b1)))+((y-b3)/m3)((m1*x)+b1)-((m2*x)+b2)) #replace this with your calculation for area
     return area
 
 
