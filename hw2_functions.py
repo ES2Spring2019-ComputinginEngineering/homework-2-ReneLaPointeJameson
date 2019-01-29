@@ -1,11 +1,11 @@
- HOMEWORK 2 --- ES2
+#HOMEWORK 2 --- ES2
 # Triangle Calculator
 
 # FILL THESE COMMENTS IN
 #*****************************************
 # YOUR NAME: René LaPointe Jameson
 # NUMBER OF HOURS TO COMPLETE:  (please track how long this homework takes you to complete).
-# YOUR COLLABORATION STATEMENT(s) (refer to syllabus):
+# YOUR COLLABORATION STATEMENT(s): I received assistance from Brian Barrows. I received assistance from Sofia Levy.
 #
 #*****************************************
 
@@ -36,7 +36,7 @@ def intersectionoftwolines_y(m1, b1, m2, b2):
     # y = (m1 * x) + b1 and y = (m2 * x) + b2 intersect.
 
 
-    y = m1((b2-b1)/(m1-m2))+b1 #replace this with your calculation for y
+    y = m1*((b2-b1)/(m1-m2))+b1 #replace this with your calculation for y
     return y
 
 
@@ -45,25 +45,34 @@ def distancebetweenpoints(x1, y1, x2, y2):
     # (x1, y1) and (x2, y2).
 
 
-    distance = math.sqrt((x2-x1)**2 +(y2-y1)**2) # replace with your calculation for distance
+    distance = math.sqrt(((x2-x1)**2)+((y2-y1)**2)) # replace with your calculation for distance
     return distance
 
 def heronsformula(a, b, c):
     # Calculate the area of a triangle with three known side lengths.
     # You may want to look up Heron's formula online.
-    s= (a+b+c)/2
+    s = (a+b+c)/2
 
 
-    area = math.sqrt(s(s-a)(s-b)(s-c)) #replace this with your calculation for area
+    area= math.sqrt(s*(s-a)*(s-b)*(s-c)) #replace this with your calculation for area
     return area
 
 def areaofatriangle(m1, b1, m2, b2, m3, b3):
     #Using the three functions above, now calculate the area of a
     #triangle when the three sides are described by three linear equations
     #y = (m1 * x) + b1;  y = (m2 * x) + b2; and y = (m3 * x) + b3
+    intersectionx1 = intersectionoftwolines_x1 = (m1, b1, m2, b2)
+    intersectionx2 = intersectionoftwolines_x2 = (m2, b2, m3, b3)
+    intersectionx3 = intersectionoftwolines_x3 = (m3, b3, m1, b1)
 
+    intersectiony1 = intersectionoftwolines_y1 = (m1, b1, m2, b2)
+    intersectiony2 = intersectionoftwolines_y2 = (m2, b2, m3, b3)
+    intersectiony3 = intersectionoftwolines_y3 = (m3, b3, m1, b1)
 
-    area = math.abs(((y-b1/m1)((m2*x)+b2))-((m3*x)+b3)+((y-b2/m2)(((m3*x)+b3)-((m1*x)+b1)))+((y-b3)/m3)((m1*x)+b1)-((m2*x)+b2)) #replace this with your calculation for area
+    length1 = distancebetweenpoints(intersectionx1, intersectiony1, intersectionx2, intersectiony2)
+    length2 = distancebetweenpoints(intersectionx2, intersectiony2, intersectionx3, intersectiony3)
+    length3 = distancebetweenpoints(intersectionx1, intersectiony1, intersectionx3, intersectiony3)
+    area = heronsformula(length1,length2,length3) #replace this with your calculation for area
     return area
 
 
