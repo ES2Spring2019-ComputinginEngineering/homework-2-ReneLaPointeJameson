@@ -4,8 +4,8 @@
 # FILL THESE COMMENTS IN
 #*****************************************
 # YOUR NAME: René LaPointe Jameson
-# NUMBER OF HOURS TO COMPLETE:  (please track how long this homework takes you to complete).
-# YOUR COLLABORATION STATEMENT(s): I received assistance from Brian Barrows. I received assistance from Sofia Levy.
+# NUMBER OF HOURS TO COMPLETE: 4.5 hours
+# YOUR COLLABORATION STATEMENT(s): I received assistance from Professor Jennifer Cross. I received assistance from TA Brian Barrows. I received assistance from Sofia Levy.
 #
 #*****************************************
 
